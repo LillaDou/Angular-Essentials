@@ -1,0 +1,17 @@
+
+<li>(TODO) Read Angular Essentials Guide</li>
+
+@if ( !isComplete ){
+    <p>Title: {{ taskTitle }}</p>
+} @else {
+    <p>No task</p>
+}
+
+<button (click)="switchTaskState(); listenToClickPosition($event)">State change</button>
+
+<ul>
+    @for (ingredient of ingredientList; track ingredient.name) {
+        <li>{{ ingredient.quantity }} - {{ ingredient.name }}</li>
+    }
+</ul>
+
